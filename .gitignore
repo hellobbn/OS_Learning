@@ -1,0 +1,5 @@
+iso/
+kernel.elf
+*.o
+*.txy
+*.iso
