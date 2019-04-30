@@ -29,5 +29,5 @@ loader:					; The loader label (entry point)
 
 section .bss
 align 4					; Align at 4 bytes
-kernel_stack:			; label points to the beginning of memory
-	resb KERNEL_STACK_SIZE			; reserve stack for the kernel
+kernel_stack:			; Label points to the beginning of memory
+	resb KERNEL_STACK_SIZE			; Reserve stack for the kernel
