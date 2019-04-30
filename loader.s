@@ -19,7 +19,6 @@ dd CHECKSUM				; Write the checksum
 
 loader:					; The loader label (entry point)
 	mov esp, kernel_stack + KERNEL_STACK_SIZE			; Point esp to the start of the stack
-	mov eax, 0xCAFEBABE				; Save the 0xCAFEBABE to eax
 	push dword 3					; Argument 3
 	push dword 2					; Argument 2
 	push dword 1					; Argument 1
