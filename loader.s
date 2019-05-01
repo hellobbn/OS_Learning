@@ -25,8 +25,16 @@ loader:					; The loader label (entry point)
 	push dword 2					; Argument 2
 	push dword 1					; Argument 1
 	call sum_of_three				; Call the function, the result will be in eax
-print_test:							; Test printing something to the framebuffer
-	mov word [0x000B8000], 0x2841	; Green foreground with grey background
+
+; ======================= TEST SECTION START =========================================
+;print_test:							; Test printing something to the framebuffer
+;	mov word [0x000B8000], 0x2841	; Green foreground with grey background
+;	out 0x3D4, 14					; 14 tells the framebuffer to expect the highest 8 bits of the position
+;	out 0x3D5, 0x00					; Sending the highest bits of 0x0050
+;	out 0x3D4, 15					; 15 tells the framebuffer to expect the lowest 8 bits of the position
+;	out 0x3D5, 0x50					; Sending the lowest 8 bits of 0x0050
+;
+; ======================= TEST SECTION END ============================================
 call_kmain:
 	call kmain						; kmain starts here
 .loop:
