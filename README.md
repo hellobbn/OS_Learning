@@ -14,6 +14,10 @@ yay -Syy bochs
 bochs -f bochsrc -q
 ```
 
+## TODO
+- [ ] Implement driver for writing to framebuffer
+- [ ] Implement driver for outputing to serial 
+
 ## Credit
 
 littleOS
